@@ -1,0 +1,19 @@
+.body {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  background-color: #c1c1c1;
+  box-shadow: 3px 3px 3px #666;
+}
+
+.header {
+  padding: .5em 1em;
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  justify-content:space-between;
+  padding: .5em 1em;
+}

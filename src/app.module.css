@@ -1,0 +1,20 @@
+.app {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.postList {
+  flex-grow: 2;
+  flex-shrink: 1;
+}
+
+.subreddits {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding: 0 2em;
+  text-align: left;
+  max-height: 100vh;
+  background-color: #c1c1c1;
+}
