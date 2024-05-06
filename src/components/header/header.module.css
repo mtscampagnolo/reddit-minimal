@@ -1,0 +1,14 @@
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  background-color: #554640;
+  padding: .25em 2em;
+  color: #8da7be;
+}
+
+.logo span {
+  color: #cde6f5;
+}
