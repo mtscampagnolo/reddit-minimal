@@ -1,13 +1,16 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {selectPosts, postsIsLoading, postsHasError, loadPosts} from './postListSlice';
+import {selectPosts, postsIsLoading, postsHasError, loadPosts, selectPostsByTerm} from './postListSlice';
+import {selectTerm} from '../search/searchSlice';
 import Post from '../post/Post';
 
 const PostList = (props) => {
   const dispatch = useDispatch();
-  const posts = useSelector(selectPosts);
   const isLoading = useSelector(postsIsLoading);
   const hasError = useSelector(postsHasError);
+  const term = useSelector(selectTerm);
+  const posts = useSelector(selectPosts);
+
 
   useEffect(() => {
     dispatch(loadPosts());
@@ -19,6 +22,10 @@ const PostList = (props) => {
 
   if(hasError) {
     return 'fail to load posts'
+  }
+
+  if(!posts) {
+    return `No posts find for ${term} search`;
   }
 
   return (

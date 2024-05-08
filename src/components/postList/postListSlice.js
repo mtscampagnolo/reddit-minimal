@@ -80,7 +80,15 @@ const postListSlice = createSlice({
   }
 })
 
-export const selectPosts = state => state.postList.posts;
+export const selectPosts = state => {
+  if(state.search.term){
+    return state.postList.posts.filter(post => {
+      const term = new RegExp(state.search.term.toLowerCase());
+      return term.test(post.title.toLowerCase());
+    })
+  }
+  return state.postList.posts
+};
 export const postsIsLoading = state => state.postList.isLoading;
 export const postsHasError = state => state.postList.hasError;
 export default postListSlice.reducer;

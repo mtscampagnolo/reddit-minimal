@@ -13,8 +13,12 @@
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  padding: 0 2em;
+  padding: 5em 2em 0;
   text-align: left;
   max-height: 100vh;
-  background-color: #c1c1c1;
+  background-color: #87919e;
+}
+
+.subreddits h2 {
+  color: #ff729f;
 }

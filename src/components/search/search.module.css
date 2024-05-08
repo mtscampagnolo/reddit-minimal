@@ -1,0 +1,28 @@
+.form {
+  background-color: white;
+  padding-left: 10px;
+  border-radius: 30px;
+  border: solid 5px #ff729f;
+  height: 3.2em; 
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.input {
+ height: 2.5em; 
+ width: 250px;
+ border: 0;
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.submit {
+  height: 3.2em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: white;
+  border: solid 5px #ff729f;
+ }
